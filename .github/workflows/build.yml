@@ -18,7 +18,6 @@ jobs:
           - os: macos-latest
             artifact-patterns: |
               dist/*.dmg
-              dist/*.zip
           - os: ubuntu-latest
             artifact-patterns: |
               dist/*.AppImage
