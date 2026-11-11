@@ -9,9 +9,9 @@ Each time a new version is released (tagged `v*`), GitHub Actions builds install
 for Windows and Mac automatically. Grab them from the repo's **Releases** page, or
 from the **Actions** tab → latest successful "Build desktop apps" run → **Artifacts**.
 
-- **Windows:** download `Desmos Offline Setup *.exe` and run it (or use the
-  `*-portable.exe` build, which needs no installation — just double-click it,
-  even from a USB drive or a shared folder).
+- **Windows:** download the portable `.exe` and double-click it — no
+  installation, no admin rights, works straight from a USB drive or a shared
+  folder.
 - **Mac:** download the `.dmg`, open it, and drag **Desmos Offline** into
   Applications. Because the app isn't signed with an Apple Developer certificate,
   the first launch will be blocked by Gatekeeper — right-click (or Control-click)
@@ -53,8 +53,8 @@ npm start          # run the app locally
 ### Building installers
 
 ```sh
-npm run dist:win     # Windows installer + portable .exe (run on/for Windows)
-npm run dist:mac      # Mac .dmg + .zip (run on macOS)
+npm run dist:win     # Windows portable .exe (run on/for Windows)
+npm run dist:mac      # Mac .dmg, Intel + Apple Silicon (run on macOS)
 npm run dist:linux    # Linux AppImage
 ```
 

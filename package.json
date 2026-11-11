@@ -18,6 +18,8 @@
   "build": {
     "appId": "com.desmosoffline.app",
     "productName": "Desmos Offline",
+    "compression": "maximum",
+    "electronLanguages": ["en", "en-US"],
     "files": [
       "main.js",
       "preload.js",
@@ -30,19 +32,13 @@
     },
     "win": {
       "target": [
-        { "target": "nsis", "arch": ["x64"] },
         { "target": "portable", "arch": ["x64"] }
       ],
       "icon": "build/icon.png"
     },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
-    },
     "mac": {
       "target": [
-        { "target": "dmg", "arch": ["x64", "arm64"] },
-        { "target": "zip", "arch": ["x64", "arm64"] }
+        { "target": "dmg", "arch": ["x64", "arm64"] }
       ],
       "icon": "build/icon.png",
       "category": "public.app-category.education"
